@@ -10,7 +10,7 @@ import Foundation
 public struct PMNetworking {
     
     public static func doSomething() {
-        print("hello")
+        print("hello!!!")
     }
     
 }
