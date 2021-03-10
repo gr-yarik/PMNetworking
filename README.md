@@ -5,7 +5,7 @@
 
 Чтобы переопределить то, как обрабатываются ответы сервера (имею в виду числа 200 , 404, вы поняли) надо передать замыкание с вашей логикой в последний параметр инициализатора объекта Resource. 
 НАПРИМЕР:
-```
+``` swift
 let resourse = Resource(url: url, requestMethod: .DELETE, headers: headers, decodingType: Todo.self) { status in
     switch status {
     case 200:
