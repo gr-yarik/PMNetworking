@@ -51,7 +51,8 @@ public struct Resource<T: Codable> {
         case .GET, .DELETE:
             break
         case .PUT(let body), .POST(let body):
-            request.httpBody = body.percentEncoded()
+            let jsonData = try? JSONSerialization.data(withJSONObject: body)
+            request.httpBody = jsonData
         }
         
         request.addHeaders(defaultHeaders: networking.defaultHeaders, requestHeaders: headers)
