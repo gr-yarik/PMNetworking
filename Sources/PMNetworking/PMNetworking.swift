@@ -25,7 +25,7 @@ public struct PMNetworking: Networking {
         case 200..<300:
             return
         default:
-            throw PMNetworkingError.invalidStatus
+            throw PMNetworkingError.invalidResponse
         }
     }
     
