@@ -63,6 +63,7 @@ public struct PMNetworking: Networking {
                 then(.success(parsedData))
             } catch let error as NSError {
                 print(error.localizedDescription)
+                then(.failure(.invalidResponse))
             }
         }.resume()
     }
